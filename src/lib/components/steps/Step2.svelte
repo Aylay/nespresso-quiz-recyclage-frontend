@@ -13,7 +13,7 @@
 		<p class="text-m-m text-black lg:text-m">
 			Découvrez toutes les étapes du traitement des capsules en aluminium dans la vidéo en partenariat avec Veolia.
 		</p>
-		<div class="relative overflow-hidden w-full lg:w-[90rem] pt-[56.25%] my-20 animate-fade animate-ease-in-out animate-delay-500 rounded-[2rem]">
+		<div class="relative overflow-hidden w-full lg:w-[calc(100vw*0.55)] pt-[56.25%] my-20 animate-fade animate-ease-in-out animate-delay-500 rounded-[2rem]">
 			<iframe
 				src="https://www.youtube.com/embed/s7BCO72uoeI"
 				title="YouTube video player"
