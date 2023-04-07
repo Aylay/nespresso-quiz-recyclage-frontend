@@ -14,11 +14,11 @@
 			activeStep: [2],
 			step: 2
 		},
-		{
-			label: 'Quiz',
-			activeStep: [4, 5, 6, 7, 8],
-			step: 4
-		}
+		// {
+		// 	label: 'Quiz',
+		// 	activeStep: [4, 5, 6, 7, 8],
+		// 	step: 4
+		// }
 	];
 </script>
 <div class="absolute inset-x-0 top-20 z-40 flex w-full justify-between px-[5%] animate-fade-down animate-delay-1000 animate-ease-in-out">
