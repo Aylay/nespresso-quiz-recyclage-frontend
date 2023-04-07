@@ -5,7 +5,7 @@
   const nextStep: number = 3;
 </script>
 
-<div class="relative flex h-full items-center justify-center px-8 z-40">
+<div class="relative flex h-full items-center justify-center px-8 z-20">
 	<div class="relative z-10 mt-[calc(100vh*0.1)] animate-fade animate-ease-in-out animate-delay-200 flex flex-col text-center">
 		<h1 class="mb-8 text-h1-m uppercase text-black lg:text-h1">
 			Nespresso x veolia

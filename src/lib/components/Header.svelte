@@ -21,7 +21,7 @@
 		}
 	];
 </script>
-<div class="absolute inset-x-0 top-20 z-30 flex w-full justify-between px-[5%] animate-fade-down animate-delay-1000 animate-ease-in-out">
+<div class="absolute inset-x-0 top-20 z-40 flex w-full justify-between px-[5%] animate-fade-down animate-delay-1000 animate-ease-in-out">
   <div class="w-full max-w-xs cursor-pointer" on:click={() => (newStep = 0)}>
     <Logo />
   </div>
