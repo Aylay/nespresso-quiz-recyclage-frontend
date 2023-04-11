@@ -18,7 +18,7 @@
 			class="relative mt-8 w-full animate-fade overflow-hidden rounded-[2rem] pt-[56.25%] animate-delay-500 animate-ease-in-out lg:my-20 lg:w-[calc(100vw*0.55)]"
 		>
 			<iframe
-				src="https://www.youtube.com/embed/s7BCO72uoeI"
+				src="https://www.youtube.com/embed/Wu7B1FtmHZs"
 				title="YouTube video player"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

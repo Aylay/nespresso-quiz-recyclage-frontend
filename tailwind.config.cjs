@@ -59,7 +59,7 @@ module.exports = {
 			'h3-m': [
 				'1.8rem',
 				{
-					lineHeight: '6rem',
+					lineHeight: '2.2rem',
 					fontWeight: '800'
 				}
 			],
