@@ -69,12 +69,14 @@
 				{/each}
 			</div>
 
-			<div class="mt-20 flex justify-center items-center gap-2 animate-fade animate-delay-1000 cursor-pointer" on:click={() => validAnswer()}>
-				<p class="text-m-m lg:text-m font-extrabold text-gold">
-					Je valide mes réponses
-				</p>
-				<ArrowQCM />
-			</div>
+			<Hoverable let:hovering={active}>
+				<div class="mt-20 flex justify-center items-center gap-2 animate-fade animate-delay-1000 cursor-pointer" on:click={() => validAnswer()}>
+					<p class="text-m-m lg:text-m font-extrabold transition-colors {active ? 'text-antique-bronze' : 'text-gold'}">
+						Je valide mes réponses
+					</p>
+					<ArrowQCM hover={active ? true : false} />
+				</div>
+			</Hoverable>
 		</div>
 	</div>
 {:else}
