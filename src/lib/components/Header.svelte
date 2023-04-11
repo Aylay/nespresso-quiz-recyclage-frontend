@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<nav class="max-lg:hidden">
-		<ul class="flex items-center gap-4 rounded-[2rem] bg-white p-11">
+		<ul class="flex items-center gap-4 rounded-[20px] bg-white p-11">
 			{#each nav as item}
 				<Hoverable let:hovering={active}>
 					<li

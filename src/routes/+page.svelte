@@ -5,12 +5,13 @@
 	import Step0 from '$lib/components/steps/Step0.svelte';
 	import Step1 from '$lib/components/steps/Step1.svelte';
 	import Step2 from '$lib/components/steps/Step2.svelte';
-	import Step3 from '$lib/components/steps/StepQuestion.svelte';
+	import StepQuestion from '$lib/components/steps/StepQuestion.svelte';
 	import Step20 from '$lib/components/steps/Step20.svelte';
 
 	import Header from '$lib/components/Header.svelte';
+	import StepQcm from '$lib/components/steps/StepQCM.svelte';
 
-	$: step = 0;
+	$: step = 4;
 
 	const nav2 = [
 		{
@@ -55,9 +56,56 @@
       alt: 'Question 1'
     },
     ref: {
-      href: '#',
+      href: 'https://www.nespresso.com/agit/article/environnement/quel-impact-environnemental-pour-le-systeme-nespresso/',
       text: "<sup>*</sup> En savoir plus à travers l’étude d'impact environnemental réalisée par le cabinet expert Quantis en France en 2020 selon la norme ISO 14040/14044"
-    }
+    },
+	nextLabel: 'Je découvre la question suivante',
+	};
+
+	const step4Infos = {
+		index: 2,
+		question:
+			"L'aluminium recyclé peut servir à fabriquer de nouveaux objets, à votre avis lesquels en font partie ?",
+		answers: [
+			{
+				label: 'Des canettes',
+				valid: true
+			},
+			{
+				label: 'Des moteurs de voitures',
+				valid: true
+			},
+			{
+				label: 'Des vélos',
+				valid: true
+			},
+			{
+				label: 'Des économes',
+				valid: true
+			},
+			{
+				label: 'Des stylos',
+				valid: true
+			},
+			{
+				label: 'Des couteaux-suisses',
+				valid: true
+			}
+		],
+    texts: [
+      "L’aluminium est <strong class='font-semibold'>un matériau recyclable</strong>.<br />Celui-ci peut <strong class='font-semibold'>être refondu pour fabriquer de nouveaux objets</strong>, comme des vélos ou des canettes par exemple.",
+      "<strong class='font-semibold'>Le saviez-vous ?</strong><br />Nespresso s’engage sur la provenance de l’aluminium de ses capsules et travaille à <strong class='font-semibold'>diminuer l’impact environnemental</strong> lié à sa transformation et à son utilisation en créant le premier standard d’aluminium plus responsable."
+    ],
+    img: {
+      src: '/img/question-2.png',
+      alt: 'Question 2'
+    },
+	ref: {
+		href: 'https://aluminium-stewardship.org/',
+		text: "Plus d’info sur ASI Home | Aluminium Stewardship Initiative"
+	},
+    maxWidth: '47rem',
+	nextLabel: 'Je découvre la question suivante',
 	};
 
 	const step5Infos = {
@@ -92,17 +140,65 @@
       "Pour Nespresso, cette certification vient reconnaître 30 ans d’engagements et d’actions concrètes en matière environnementale, sociale et sociétale."
     ],
     img: {
-      src: '/img/question-2.png',
-      alt: 'Question 2'
+      src: '/img/question-3.png',
+      alt: 'Question 3'
     },
-    maxWidth: '42rem'
+    maxWidth: '42rem',
+	nextLabel: 'Je découvre la question suivante',
 	};
+
+const step6Infos = {
+	index: 4,
+	question:
+		"Selon vous, quelle étape a le plus d’impact sur l’empreinte carbone d’une tasse de café ?",
+	description: 'Sur une tasse Nespresso Professionnel de 40 ml',
+	answers: [
+		{
+			label: 'La distribution',
+			valid: false
+		},
+		{
+			label: 'La fabrication',
+			valid: false
+		},
+		{
+			label: 'La culture et le transport du café vert',
+			valid: true
+		},
+		{
+			label: 'La production des emballages',
+			valid: false
+		},
+		{
+			label: 'La préparation du café par la machine',
+			valid: false
+		},
+		{
+			label: 'La fin de vie des capsules',
+			valid: false
+		}
+	],
+	nextLabel: "J'ai terminé le quiz",
+	texts: [
+		"Mesurer l’impact environnemental d’un produit nécessite d’étudier l’ensemble de son cycle de vie. Parce que <strong class='font-semibold'>ce qui a le plus d’impact dans l’empreinte environnementale d’une tasse de café sont les étapes de production et transport du café vert et la phase d’utilisation</strong>.",
+		"Contrairement aux idées reçues, déguster un café en capsule Nespresso a un impact environnemental inférieur à un café préparé avec une machine à grains automatique<sup>*</sup>."
+	],
+	img: {
+		src: '/img/question-4.png',
+		alt: 'Question 4'
+	},
+  maxWidth: '59rem',
+	ref: {
+		href: 'https://www.nespresso.com/agit/article/environnement/quel-impact-environnemental-pour-le-systeme-nespresso/',
+		text: "<sup>*</sup> En savoir plus à travers l’étude d'impact environnemental réalisée par le cabinet expert Quantis en France en 2020 selon la norme ISO 14040/14044"
+	}
+};
 </script>
 
 <div
-	class="relative h-screen overflow-hidden {[0, 1, 2, 20].includes(step)
+	class="relative overflow-hidden {[0, 1, 2, 20].includes(step)
 		? 'h-screen'
-		: 'lg:screen'}"
+		: 'lg:h-screen'}"
 >
 	<Header bind:newStep={step} />
 
@@ -113,9 +209,13 @@
 	{:else if step === 2}
 		<Step2 bind:newStep={step} />
 	{:else if step === 3}
-		<Step3 bind:newStep={step} infos={step3Infos} nextStep={4} />
+		<StepQuestion bind:newStep={step} infos={step3Infos} nextStep={4} />
 	{:else if step === 4}
-		<Step3 bind:newStep={step} infos={step5Infos} nextStep={5} />
+		<StepQcm bind:newStep={step} infos={step4Infos} nextStep={5} />
+	{:else if step === 5}
+		<StepQuestion bind:newStep={step} infos={step5Infos} nextStep={6} />
+	{:else if step === 6}
+		<StepQuestion bind:newStep={step} infos={step6Infos} nextStep={20} />
 	{:else if step === 20}
 		<Step20 />
 	{/if}

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CTAStep from '$lib/components/utilities/CTAStep.svelte';
+	import ArrowQCM from '$lib/components/svg/ArrowQCM.svelte';
 	import Hoverable from '../utilities/Hoverable.svelte';
 
 	export let newStep: number;
@@ -7,12 +8,17 @@
 	export let nextStep: number;
 
 	let answerStep = false;
-	let selectedAnswer = '';
-	let goodAnswer = false;
+	let selectedAnswer: any = [];
 
-	function choosenAnswer(answer: string, good: any) {
-		selectedAnswer = answer;
-		good === true ? (goodAnswer = true) : (goodAnswer = false);
+	function selectAnswer(answer: string) {
+		if (selectedAnswer.includes(answer)) {
+			selectedAnswer = selectedAnswer.filter((a: string) => (a !== answer))
+		} else {
+			selectedAnswer.push(answer)
+		}
+	}
+
+	function validAnswer() {
 		setTimeout(() => {
 			answerStep = true;
 		}, 500);
@@ -34,25 +40,25 @@
 					<Hoverable let:hovering={active}>
 						<div
 							class="flex animate-fade cursor-pointer items-center gap-4 rounded-2xl p-4 transition-colors {active ||
-							selectedAnswer === answer.label
+							selectedAnswer.includes(answer.label)
 								? 'bg-black'
 								: 'bg-leaf'}"
-							on:click={() => choosenAnswer(answer.label, answer.valid)}
+							on:click={() => selectAnswer(answer.label)}
 							style="animation-delay: {750 + i * 250}ms;"
 						>
 							<div
 								class="flex h-6 w-6 items-center justify-center rounded-lg border border-solid transition-colors {active ||
-								selectedAnswer === answer.label
+									selectedAnswer.includes(answer.label)
 									? 'border-white'
 									: 'border-black'}"
 							>
-								{#if active || selectedAnswer === answer.label}
+								{#if active || selectedAnswer.includes(answer.label)}
 									<div class="h-4 w-4 animate-fade rounded-lg bg-white animate-duration-150" />
 								{/if}
 							</div>
 							<p
 								class="text-n2-m transition-colors lg:text-m {active ||
-								selectedAnswer === answer.label
+									selectedAnswer.includes(answer.label)
 									? 'text-white'
 									: 'text-black'}"
 							>
@@ -62,6 +68,13 @@
 					</Hoverable>
 				{/each}
 			</div>
+
+			<div class="mt-20 flex justify-center items-center gap-2 animate-fade animate-delay-1000 cursor-pointer" on:click={() => validAnswer()}>
+				<p class="text-m-m lg:text-m font-extrabold text-gold">
+					Je valide mes réponses
+				</p>
+				<ArrowQCM />
+			</div>
 		</div>
 	</div>
 {:else}
@@ -70,10 +83,11 @@
 			<div class="flex max-w-[45rem] flex-col items-center">
 				<p class="mb-4 animate-fade text-h4 uppercase">Question {infos.index}/4</p>
 				<p class="text-center text-h3-m uppercase lg:text-h3">
-					{#if goodAnswer}
+					{#if selectedAnswer.length === infos.answers.length}
 						Bravo !<br />C'est la bonne réponse.
 					{:else}
-						Pas tout à fait
+						Pas tout à fait<br />
+						{selectedAnswer.length} bonne{selectedAnswer.length > 1 ? 's' : ''} réponse{selectedAnswer.length > 1 ? 's' : ''} sur 6.
 					{/if}
 				</p>
 				<div class="my-16 flex max-w-[30rem] flex-wrap justify-center gap-4 lg:my-20">

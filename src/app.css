@@ -26,7 +26,6 @@
 	}
 
 	html {
-		font-size: 10px;
-		@apply bg-parchment font-base text-black;
+		@apply bg-parchment font-base text-black max-lg:text-[10px] lg:text-[8px] 2xl:text-[10px];
 	}
 }
