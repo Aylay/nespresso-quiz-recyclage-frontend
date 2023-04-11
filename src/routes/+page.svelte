@@ -11,7 +11,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import StepQcm from '$lib/components/steps/StepQCM.svelte';
 
-	$: step = 4;
+	$: step = 0;
 
 	const nav2 = [
 		{
