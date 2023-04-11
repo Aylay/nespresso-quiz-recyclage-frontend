@@ -22,17 +22,19 @@
 		/>
 	</div>
 	<div class="relative z-10 flex flex-col text-center lg:max-w-[68rem]">
-		<p class="mb-4 animate-fade-down text-m-m lg:text-l text-black animate-ease-in-out">
+		<p class="mb-4 animate-fade-down text-m-m text-black animate-ease-in-out lg:text-l">
 			Toutes les capsules en aluminium collectées dans votre établissement ont une seconde vie.
 			Elles sont collectées via les systèmes Nespresso et acheminées au centre de traitement de
 			notre partenaire Veolia, dans les Hauts-de-France.
 		</p>
-		<p class="mb-20 animate-fade-up text-m-m lg:text-l text-black animate-ease-in-out">
+		<p class="mb-20 animate-fade-up text-m-m text-black animate-ease-in-out lg:text-l">
 			Après séparation, le marc de café est valorisé en compost, tandis que l’aluminium sera
 			redirigé vers sa filière de recyclage pour servir à la création de nouveaux objets comme des
 			vélos par exemple.
 		</p>
-		<div class="flex animate-fade justify-center animate-delay-1000 animate-ease-in-out  max-lg:hidden">
+		<div
+			class="flex animate-fade justify-center animate-delay-1000 animate-ease-in-out max-lg:hidden"
+		>
 			<CTAStep label="Je découvre la vidéo" step={nextStep} bind:newStep />
 		</div>
 	</div>

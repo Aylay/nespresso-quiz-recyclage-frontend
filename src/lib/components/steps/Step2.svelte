@@ -7,15 +7,15 @@
 
 <div class="relative z-20 flex h-full items-center justify-center px-8">
 	<div
-		class="relative z-10 lg:mt-[calc(100vh*0.1)] flex animate-fade flex-col text-center animate-delay-200 animate-ease-in-out"
+		class="relative z-10 flex animate-fade flex-col text-center animate-delay-200 animate-ease-in-out lg:mt-[calc(100vh*0.1)]"
 	>
-		<h1 class="mb-4 lg:mb-8 text-h1-m uppercase text-black lg:text-h1">Nespresso x veolia</h1>
+		<h1 class="mb-4 text-h1-m uppercase text-black lg:mb-8 lg:text-h1">Nespresso x veolia</h1>
 		<p class="text-m-m text-black lg:text-m">
 			Découvrez toutes les étapes du traitement des capsules en aluminium dans la vidéo en
 			partenariat avec Veolia.
 		</p>
 		<div
-			class="relative mt-8 lg:my-20 w-full animate-fade overflow-hidden rounded-[2rem] pt-[56.25%] animate-delay-500 animate-ease-in-out lg:w-[calc(100vw*0.55)]"
+			class="relative mt-8 w-full animate-fade overflow-hidden rounded-[2rem] pt-[56.25%] animate-delay-500 animate-ease-in-out lg:my-20 lg:w-[calc(100vw*0.55)]"
 		>
 			<iframe
 				src="https://www.youtube.com/embed/s7BCO72uoeI"
@@ -35,6 +35,10 @@
 		</div>
 	</div>
 	<div class="absolute inset-x-0 bottom-0 z-30 flex w-full justify-center lg:hidden">
-		<CTAStep label="Je teste mes connaissances,<br />je participe  au quiz" step={nextStep} bind:newStep />
+		<CTAStep
+			label="Je teste mes connaissances,<br />je participe  au quiz"
+			step={nextStep}
+			bind:newStep
+		/>
 	</div>
 </div>

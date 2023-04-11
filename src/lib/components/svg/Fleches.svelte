@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.67 416.02"
+<script lang="ts">
+	export let newClass = '';
+</script>
+
+<svg class={newClass} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.67 416.02"
 	><defs
 		><style>
 			.d {

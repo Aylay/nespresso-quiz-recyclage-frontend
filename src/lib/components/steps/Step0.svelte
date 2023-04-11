@@ -25,7 +25,7 @@
 		/>
 	</div>
 	<div
-		class="relative z-10 lg:mt-[calc(100vh*0.05)] flex animate-fade flex-col text-center animate-delay-200 animate-ease-in-out lg:max-w-[68rem]"
+		class="relative z-10 flex animate-fade flex-col text-center animate-delay-200 animate-ease-in-out lg:mt-[calc(100vh*0.05)] lg:max-w-[68rem]"
 	>
 		<h1 class="mb-8 text-h2-m uppercase text-parchment lg:text-h1">
 			Nespresso agit dans le recyclage des capsules en aluminium. Et pas que !

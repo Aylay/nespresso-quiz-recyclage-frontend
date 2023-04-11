@@ -16,7 +16,7 @@
 		},
 		{
 			label: 'Quiz',
-			activeStep: [4, 5, 6, 7, 8],
+			activeStep: [4, 5, 6, 7, 20],
 			step: 4
 		}
 	];
