@@ -4,7 +4,6 @@
 
 	export let label = '';
 	export let href = '#';
-	export let step: number;
 </script>
 
 <Hoverable let:hovering={active}>

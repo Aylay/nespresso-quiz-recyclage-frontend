@@ -1,4 +1,15 @@
-<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script lang="ts">
+	export let newClass = '';
+</script>
+
+<svg
+	class={newClass}
+	width="20"
+	height="21"
+	viewBox="0 0 20 21"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<path
 		d="M13 7.1875L16 10.1875L13 13.1931"
 		stroke="white"

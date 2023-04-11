@@ -14,6 +14,7 @@ module.exports = {
 			leaf: '#C4C5AB',
 			crema: '#E9DFBC',
 			earth: '#CBB79E',
+			transparent: 'transparent',
 			'antique-bronze': '#715206'
 		},
 		fontFamily: {
@@ -30,27 +31,28 @@ module.exports = {
 			'h1-m': [
 				'3rem',
 				{
-					lineHeight: '6rem',
+					lineHeight: '3.6rem',
 					fontWeight: '800'
 				}
 			],
 			h2: [
 				'4rem',
 				{
-					lineHeight: '6rem',
+					lineHeight: '4.8rem',
 					fontWeight: '800'
 				}
 			],
 			'h2-m': [
 				'2.5rem',
 				{
-					lineHeight: '6rem',
+					lineHeight: '3rem',
 					fontWeight: '800'
 				}
 			],
 			h3: [
 				'2.4rem',
 				{
+					lineHeight: '2.9rem',
 					fontWeight: '800'
 				}
 			],
@@ -64,7 +66,7 @@ module.exports = {
 			h4: [
 				'1.2rem',
 				{
-					lineHeight: '6rem',
+					lineHeight: '1.4rem',
 					fontWeight: '800'
 				}
 			],
@@ -100,10 +102,8 @@ module.exports = {
 			]
 		},
 		animation: {
-			'spin': 'spin 10s linear infinite',
+			spin: 'spin 10s linear infinite'
 		}
 	},
-  plugins: [
-    require('tailwindcss-animated')
-  ],
+	plugins: [require('tailwindcss-animated')]
 };
