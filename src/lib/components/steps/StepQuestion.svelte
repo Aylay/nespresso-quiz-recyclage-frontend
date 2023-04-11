@@ -106,7 +106,7 @@
 			</div>
 		</div>
 		<div class="flex-1 bg-crema px-8 lg:px-[5%] flex flex-col lg:h-full lg:items-center lg:justify-center lg:pt-[calc(100vh*0.1)] animate-fade-left animate-delay-500 gap-12">
-			<img src={infos.img.src} alt={infos.img.alt} class="w-full h-auto" />
+			<img src={infos.img.src} alt={infos.img.alt} class="w-full h-auto animate-fade" />
 			{#if infos.ref}
 			<p class="text-s max-w-[45rem] mx-auto">
 				<a href={infos.ref.href} target="_blank" rel="noopener" class="underline hover:no-underline">
