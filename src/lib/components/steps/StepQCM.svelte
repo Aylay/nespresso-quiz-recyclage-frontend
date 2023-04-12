@@ -63,7 +63,7 @@
 								{/if}
 							</div>
 							<p
-								class="text-n2-m transition-colors lg:text-m {active ||
+								class="text-n2-m transition-colors lg:text-l {active ||
 									selectedAnswer.includes(answer.label)
 									? 'text-white'
 									: 'text-black'}"
@@ -77,7 +77,7 @@
 
 			<Hoverable let:hovering={active}>
 				<div class="mt-20 flex justify-center items-center gap-2 {showCTA ? 'animate-fade' : 'opacity-0'} cursor-pointer" on:click={() => validAnswer()}>
-					<p class="text-m-m lg:text-m font-extrabold transition-colors {active ? 'text-antique-bronze' : 'text-gold'}">
+					<p class="text-m-m lg:text-l font-extrabold transition-colors {active ? 'text-antique-bronze' : 'text-gold'}">
 						Je valide mes réponses
 					</p>
 					<ArrowQCM hover={active ? true : false} />
@@ -106,7 +106,7 @@
 								: 'bg-leaf bg-opacity-30'}"
 						>
 							<p
-								class="text-n2-m transition-colors lg:text-m {answer.valid
+								class="text-n2-m transition-colors lg:text-l {answer.valid
 									? 'text-white'
 									: 'text-black line-through opacity-30'}"
 							>
@@ -117,7 +117,7 @@
 				</div>
 				<div class="flex flex-col gap-4">
 					{#each infos.texts as text}
-						<p class="text-m-m lg:text-m text-center">{@html text}</p>
+						<p class="text-m-m lg:text-l text-center">{@html text}</p>
 					{/each}
 				</div>
 				<div

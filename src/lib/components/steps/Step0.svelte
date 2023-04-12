@@ -31,7 +31,7 @@
 			Nespresso agit dans le recyclage des capsules en aluminium. Et pas que !
 		</h1>
 		<div class="mb-20 flex flex-col gap-4 lg:px-16">
-			<p class="text-m-m text-parchment lg:text-m">
+			<p class="text-m-m text-parchment lg:text-l">
 				Nespresso accompagne et forme plus de <span class="font-semibold"
 					>140 000 caféiculteurs</span
 				>
@@ -39,11 +39,11 @@
 				<span class="font-semibold">Près de 6 millions d'arbres plantés depuis 2014</span> dans et autour
 				des fermes partenaires du Programme AAA pour une Qualité Durable™.
 			</p>
-			<p class="text-m-m font-semibold text-parchment lg:text-m">
+			<p class="text-m-m font-semibold text-parchment lg:text-l">
 				+95% du café Nespresso est acheté à un prix égal ou supérieur au seuil fixé par l'ONG du
 				commerce équitable Fairtrade.
 			</p>
-			<p class="text-s text-parchment">(certifié par FLOCERT 2019)</p>
+			<p class="text-m text-parchment">(certifié par FLOCERT 2019)</p>
 		</div>
 		<div
 			class="flex animate-fade justify-center animate-delay-500 animate-ease-in-out max-lg:hidden"

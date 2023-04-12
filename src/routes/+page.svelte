@@ -271,29 +271,29 @@ beforeUpdate (() => {
 				Mentions légales
 			</h2>
 			<div class="flex flex-col gap-6">
-				<p class="text-m-m lg:text-m">Le site nespressorecycle.com est la propriété de :</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">Le site nespressorecycle.com est la propriété de :</p>
+				<p class="text-m-m lg:text-l">
 					<strong class="font-semibold">Nespresso</strong> France SAS, au capital social de 1 360 000 euros, domiciliée au 27 rue du colonel Pierre Avia,CS 21577 – 75726 PARIS CEDEX 15, immatriculée au RCS de Paris n°382 597 821,&nbsp;
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					TVA Intracommunautaire : FR 41 382 597 821.
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					Téléphone : 01 72 06 22 22 (coût d’un appel local depuis un poste fixe)
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					Email : contact@nespresso.com
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					Directeur de la publication : Jérémie HERRMANN
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					Ce site est hébergé par la société Vercel Inc. - Adresse postale : 340 S Lemon Ave #4133 Walnut, CA 91789
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					Coordonnées du webmaster : info@nespresso.com
 				</p>
-				<p class="text-m-m lg:text-m">
+				<p class="text-m-m lg:text-l">
 					Le propriétaire de ce site se réserve le droit de modifier son contenu à tout moment et sans préavis. Il ne pourra être tenu responsable des conséquences de telles modifications. De même, il se réserve le droit d’interrompre ou de     suspendre tout ou partie des fonctionnalités du site à tout moment et sans préavis.
 				</p>
 			</div>
