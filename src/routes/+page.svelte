@@ -11,7 +11,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import StepQcm from '$lib/components/steps/StepQCM.svelte';
 
-	$: step = 0;
+	$: step = 4;
 
 	const nav2 = [
 		{
@@ -66,6 +66,7 @@
 		index: 2,
 		question:
 			"L'aluminium recyclé peut servir à fabriquer de nouveaux objets, à votre avis lesquels en font partie ?",
+	description: 'Plusieurs bonnes réponses à cette question',
 		answers: [
 			{
 				label: 'Des canettes',

@@ -9,12 +9,18 @@
 
 	let answerStep = false;
 	let selectedAnswer: any = [];
+	let showCTA = false;
 
 	function selectAnswer(answer: string) {
 		if (selectedAnswer.includes(answer)) {
 			selectedAnswer = selectedAnswer.filter((a: string) => (a !== answer))
 		} else {
 			selectedAnswer.push(answer)
+		}
+		if (selectedAnswer.length > 0) {
+			showCTA = true
+		} else {
+			showCTA = false
 		}
 	}
 
@@ -70,7 +76,7 @@
 			</div>
 
 			<Hoverable let:hovering={active}>
-				<div class="mt-20 flex justify-center items-center gap-2 animate-fade animate-delay-1000 cursor-pointer" on:click={() => validAnswer()}>
+				<div class="mt-20 flex justify-center items-center gap-2 {showCTA ? 'animate-fade' : 'opacity-0'} cursor-pointer" on:click={() => validAnswer()}>
 					<p class="text-m-m lg:text-m font-extrabold transition-colors {active ? 'text-antique-bronze' : 'text-gold'}">
 						Je valide mes réponses
 					</p>
