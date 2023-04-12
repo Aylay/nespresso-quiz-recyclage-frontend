@@ -51,7 +51,7 @@
 								{/if}
 							</div>
 							<p
-								class="text-n2-m transition-colors lg:text-l {active ||
+								class="text-n2-m transition-colors lg:text-m {active ||
 								selectedAnswer === answer.label
 									? 'text-white'
 									: 'text-black'}"
@@ -84,7 +84,7 @@
 								: 'bg-leaf bg-opacity-30'}"
 						>
 							<p
-								class="text-n2-m transition-colors lg:text-l {answer.valid
+								class="text-n2-m transition-colors lg:text-m {answer.valid
 									? 'text-white'
 									: 'text-black line-through opacity-30'}"
 							>
@@ -95,7 +95,7 @@
 				</div>
 				<div class="flex flex-col gap-4">
 					{#each infos.texts as text}
-						<p class="text-m-m lg:text-l text-center">{@html text}</p>
+						<p class="text-m-m lg:text-m text-center">{@html text}</p>
 					{/each}
 				</div>
 				<div
