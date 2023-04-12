@@ -7,11 +7,13 @@
 	import Step2 from '$lib/components/steps/Step2.svelte';
 	import StepQuestion from '$lib/components/steps/StepQuestion.svelte';
 	import Step20 from '$lib/components/steps/Step20.svelte';
-
+	import Close from '$lib/components/svg/Close.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import StepQcm from '$lib/components/steps/StepQCM.svelte';
+	import { beforeUpdate } from 'svelte';
 
-	$: step = 4;
+	$: step = 0;
+	let closeLegals = 0
 
 	const nav2 = [
 		{
@@ -57,7 +59,7 @@
     },
     ref: {
       href: 'https://www.nespresso.com/agit/article/environnement/quel-impact-environnemental-pour-le-systeme-nespresso/',
-      text: "<sup>*</sup> En savoir plus à travers l’étude d'impact environnemental réalisée par le cabinet expert Quantis en France en 2020 selon la norme ISO 14040/14044"
+      text: "<sup>*</sup> <span class='underline hover:no-underline'>En savoir plus à travers l’étude d'impact environnemental réalisée par le cabinet expert Quantis en France en 2020 selon la norme ISO 14040/14044</span>"
     },
 	nextLabel: 'Je découvre la question suivante',
 	};
@@ -191,9 +193,15 @@ const step6Infos = {
   maxWidth: '59rem',
 	ref: {
 		href: 'https://www.nespresso.com/agit/article/environnement/quel-impact-environnemental-pour-le-systeme-nespresso/',
-		text: "<sup>*</sup> En savoir plus à travers l’étude d'impact environnemental réalisée par le cabinet expert Quantis en France en 2020 selon la norme ISO 14040/14044"
+		text: "<sup>*</sup> <span class='underline hover:no-underline'>En savoir plus à travers l’étude d'impact environnemental réalisée par le cabinet expert Quantis en France en 2020 selon la norme ISO 14040/14044</span>"
 	}
 };
+
+beforeUpdate (() => {
+	if (![98, 99].includes(step)) {
+		closeLegals = step
+	}
+})
 </script>
 
 <div
@@ -250,5 +258,46 @@ const step6Infos = {
 				<Fleches />
 			</div>
 		</div>
+	{/if}
+
+	{#if step === 98}
+	<div class="bg-white relative z-50 min-h-screen px-8">
+		<div class="w-16 h-16 items-center flex justify-center rounded-2xl border border-solid border-black border-opacity-10 absolute top-24 right-[5%] cursor-pointer" 
+		on:click={() => (step = closeLegals)}>
+			<Close newClass="w-10 h-10" />
+		</div>
+		<div class="pt-64 text-black max-w-7xl mx-auto flex flex-col">
+			<h2 class="text-h2-m uppercase lg:text-h2 mb-8">
+				Mentions légales
+			</h2>
+			<div class="flex flex-col gap-6">
+				<p class="text-m-m lg:text-m">Le site nespressorecycle.com est la propriété de :</p>
+				<p class="text-m-m lg:text-m">
+					<strong class="font-semibold">Nespresso</strong> France SAS, au capital social de 1 360 000 euros, domiciliée au 27 rue du colonel Pierre Avia,CS 21577 – 75726 PARIS CEDEX 15, immatriculée au RCS de Paris n°382 597 821,&nbsp;
+				</p>
+				<p class="text-m-m lg:text-m">
+					TVA Intracommunautaire : FR 41 382 597 821.
+				</p>
+				<p class="text-m-m lg:text-m">
+					Téléphone : 01 72 06 22 22 (coût d’un appel local depuis un poste fixe)
+				</p>
+				<p class="text-m-m lg:text-m">
+					Email : contact@nespresso.com
+				</p>
+				<p class="text-m-m lg:text-m">
+					Directeur de la publication : Jérémie HERRMANN
+				</p>
+				<p class="text-m-m lg:text-m">
+					Ce site est hébergé par la société Vercel Inc. - Adresse postale : 340 S Lemon Ave #4133 Walnut, CA 91789
+				</p>
+				<p class="text-m-m lg:text-m">
+					Coordonnées du webmaster : info@nespresso.com
+				</p>
+				<p class="text-m-m lg:text-m">
+					Le propriétaire de ce site se réserve le droit de modifier son contenu à tout moment et sans préavis. Il ne pourra être tenu responsable des conséquences de telles modifications. De même, il se réserve le droit d’interrompre ou de     suspendre tout ou partie des fonctionnalités du site à tout moment et sans préavis.
+				</p>
+			</div>
+		</div>
+	</div>
 	{/if}
 </div>

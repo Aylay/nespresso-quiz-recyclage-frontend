@@ -9,7 +9,7 @@
 	<div
 		class="relative z-10 flex animate-fade flex-col text-center animate-delay-200 animate-ease-in-out lg:mt-[calc(100vh*0.1)]"
 	>
-		<h1 class="mb-4 text-h1-m uppercase text-black lg:mb-8 lg:text-h1">Nespresso x veolia</h1>
+		<h1 class="mb-4 text-h2-m uppercase text-black lg:mb-8 lg:text-h2">Nespresso x veolia</h1>
 		<p class="text-m-m text-black lg:text-m">
 			Découvrez toutes les étapes du traitement des capsules en aluminium dans la vidéo en
 			partenariat avec Veolia.

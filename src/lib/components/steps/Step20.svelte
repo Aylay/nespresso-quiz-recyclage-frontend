@@ -7,7 +7,7 @@
 	<div
 		class="relative z-10 flex max-w-4xl animate-fade flex-col text-center animate-delay-200 animate-ease-in-out"
 	>
-		<h1 class="mb-8 text-h1-m uppercase text-black max-lg:px-8 lg:mb-20 lg:text-h1">
+		<h1 class="mb-8 text-h2-m uppercase text-black max-lg:px-8 lg:mb-20 lg:text-h2">
 			Merci d’avoir participé au quiz Nespresso recycle.
 		</h1>
 		<div class="flex justify-center max-lg:hidden">

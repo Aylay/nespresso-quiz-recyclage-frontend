@@ -109,7 +109,7 @@
 			<img src={infos.img.src} alt={infos.img.alt} class="mx-auto w-auto max-h-[60rem] animate-fade" />
 			{#if infos.ref}
 			<p class="text-s max-w-[45rem] mx-auto">
-				<a href={infos.ref.href} target="_blank" rel="noopener" class="underline hover:no-underline">
+				<a href={infos.ref.href} target="_blank" rel="noopener">
 					{@html infos.ref.text}
 				</a>
 			</p>
