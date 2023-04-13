@@ -167,7 +167,7 @@
 							style="animation-delay: {750 + i * 250}ms;"
 						>
 							<div
-								class="flex h-6 w-6 items-center justify-center rounded-lg border border-solid transition-colors {active ||
+								class="flex h-[16px] w-[16px] items-center justify-center rounded-lg border border-solid transition-colors {active ||
 								selectedAnswer === answer.label
 									? 'border-white'
 									: 'border-black'}"

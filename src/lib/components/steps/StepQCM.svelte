@@ -126,14 +126,12 @@
 							style="animation-delay: {750 + i * 250}ms;"
 						>
 							<div
-								class="flex h-6 w-6 items-center justify-center rounded-lg border border-solid transition-colors {active ||
+								class="flex h-[16px] w-[16px] items-center justify-center rounded-lg border border-solid transition-colors {active ||
 								selectedAnswer.includes(answer.label)
 									? 'border-white'
 									: 'border-black'}"
 							>
-								{#if active || selectedAnswer.includes(answer.label)}
-									<div class="h-4 w-4 animate-fade rounded-lg bg-white animate-duration-150" />
-								{/if}
+								<div class="h-4 w-4 {active || selectedAnswer.includes(answer.label) ? 'animate-fade' : 'opacity-0'} rounded-lg bg-white animate-duration-150" />
 							</div>
 							<p
 								class="text-n2-m transition-colors lg:text-m {active ||
