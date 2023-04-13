@@ -1,6 +1,61 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import moment from 'moment-timezone';
+
 	import CTA from '$lib/components/utilities/CTA.svelte';
 	import Fleches from '../svg/Fleches.svelte';
+
+	const todayDate = moment.tz('Europe/Paris').format('YYYY-MM-DD');
+
+	onMount(() => {
+		quizFinished();
+	});
+
+	async function quizFinished() {
+		const actualDateKPIsResponse = await fetch(
+			import.meta.env.VITE_STRAPI_URL + '/api/kpis/' + todayDate + '?populate=deep',
+			{
+				method: 'GET'
+			}
+		);
+
+		if (actualDateKPIsResponse.ok) {
+			const actualDateLangDataResponse = await actualDateKPIsResponse.json();
+			const actualDateKPIs = actualDateLangDataResponse.data;
+
+			const actualDateId = actualDateKPIs.id;
+			const actualDateQuizFinished = actualDateKPIs.attributes.quizFinished;
+
+			const data = {
+				quizFinished: actualDateQuizFinished + 1
+			};
+
+			fetch(import.meta.env.VITE_STRAPI_URL + '/api/kpis/' + actualDateId, {
+				method: 'PUT',
+				body: JSON.stringify({ data }),
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			});
+		} else {
+			createNewEntry();
+		}
+	}
+
+	async function createNewEntry() {
+		const data = {
+			date: todayDate,
+			quizFinished: 1
+		};
+
+		fetch(import.meta.env.VITE_STRAPI_URL + '/api/kpis', {
+			method: 'POST',
+			body: JSON.stringify({ data }),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+	}
 </script>
 
 <div class="relative z-20 flex h-full items-center justify-center px-8">

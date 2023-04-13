@@ -8,8 +8,9 @@
 
 <div class="relative flex h-full items-center justify-center px-8">
 	<div class="max-lg:hidden">
-
-		<div class="w-[22.6rem] h-[14.7rem] absolute top-[5%] left-[35%] rounded-[20px] overflow-hidden">
+		<div
+			class="absolute left-[35%] top-[5%] h-[14.7rem] w-[22.6rem] overflow-hidden rounded-[20px]"
+		>
 			<ImageLoader
 				src="/img/img-2-1.png"
 				alt="Nespresso"
@@ -17,7 +18,9 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="w-[37.3rem] h-[34.2rem] absolute top-1/2 -left-[8rem] rounded-[20px] overflow-hidden">
+		<div
+			class="absolute -left-[8rem] top-1/2 h-[34.2rem] w-[37.3rem] overflow-hidden rounded-[20px]"
+		>
 			<ImageLoader
 				src="/img/img-2-2.png"
 				alt="Nespresso"
@@ -25,7 +28,9 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="w-[45.3rem] h-[35.4rem] absolute -bottom-[16rem] left-[15%] rounded-[20px] overflow-hidden">
+		<div
+			class="absolute -bottom-[16rem] left-[15%] h-[35.4rem] w-[45.3rem] overflow-hidden rounded-[20px]"
+		>
 			<ImageLoader
 				src="/img/img-2-3.png"
 				alt="Nespresso"
@@ -33,7 +38,9 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="w-[47.3rem] h-[75.6rem] absolute top-1/4 -right-[17rem] rounded-[20px] overflow-hidden">
+		<div
+			class="absolute -right-[17rem] top-1/4 h-[75.6rem] w-[47.3rem] overflow-hidden rounded-[20px]"
+		>
 			<ImageLoader
 				src="/img/img-2-4.png"
 				alt="Nespresso"
@@ -43,7 +50,9 @@
 		</div>
 	</div>
 	<div class="lg:hidden">
-		<div class="w-[16.6rem] h-[11.7rem] absolute top-[17%] right-[27%] rounded-[7px] overflow-hidden">
+		<div
+			class="absolute right-[27%] top-[17%] h-[11.7rem] w-[16.6rem] overflow-hidden rounded-[7px]"
+		>
 			<ImageLoader
 				src="/img/img-2-m-4.png"
 				alt="Nespresso"
@@ -51,7 +60,7 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="w-[8.3rem] h-[5.4rem] absolute top-[20%] right-[15%] rounded-[7px] overflow-hidden">
+		<div class="absolute right-[15%] top-[20%] h-[5.4rem] w-[8.3rem] overflow-hidden rounded-[7px]">
 			<ImageLoader
 				src="/img/img-2-1.png"
 				alt="Nespresso"
@@ -59,7 +68,9 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="w-[12.2rem] h-[11.2rem] absolute bottom-[18%] -left-[2.5rem] rounded-[7px] overflow-hidden">
+		<div
+			class="absolute -left-[2.5rem] bottom-[18%] h-[11.2rem] w-[12.2rem] overflow-hidden rounded-[7px]"
+		>
 			<ImageLoader
 				src="/img/img-2-2.png"
 				alt="Nespresso"
@@ -67,7 +78,9 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="w-[15rem] h-[11.7rem] absolute bottom-[7%] left-[17%] rounded-[7px] overflow-hidden">
+		<div
+			class="absolute bottom-[7%] left-[17%] h-[11.7rem] w-[15rem] overflow-hidden rounded-[7px]"
+		>
 			<ImageLoader
 				src="/img/img-2-3.png"
 				alt="Nespresso"
