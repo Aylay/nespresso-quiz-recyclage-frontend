@@ -205,7 +205,7 @@
 	});
 </script>
 
-<div class="relative overflow-hidden {[0, 1, 2, 20].includes(step) ? 'h-screen' : 'lg:h-screen'}">
+<div class="relative {![98, 99].includes(step) ? 'overflow-hidden' : ''} {[0, 1, 2, 20].includes(step) ? 'h-screen' : 'lg:h-screen'}">
 	<Header bind:newStep={step} />
 
 	{#if step === 0}
@@ -258,7 +258,7 @@
 	{/if}
 
 	{#if step === 98}
-		<div class="relative z-50 min-h-screen bg-white px-8">
+	<div class="relative z-50 min-h-screen bg-white px-8 pb-16 lg:pb-32">
 			<div
 				class="absolute right-[5%] top-24 flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl border border-solid border-black border-opacity-10"
 				on:click={() => (step = closeLegals)}
@@ -290,6 +290,57 @@
 						sans préavis. Il ne pourra être tenu responsable des conséquences de telles
 						modifications. De même, il se réserve le droit d’interrompre ou de suspendre tout ou
 						partie des fonctionnalités du site à tout moment et sans préavis.
+					</p>
+				</div>
+			</div>
+		</div>
+	{/if}
+
+	{#if step === 99}
+		<div class="relative z-50 min-h-screen bg-white px-8 pb-16 lg:pb-32">
+			<div
+				class="absolute right-[5%] top-24 flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl border border-solid border-black border-opacity-10"
+				on:click={() => (step = closeLegals)}
+			>
+				<Close newClass="w-10 h-10" />
+			</div>
+			<div class="mx-auto flex max-w-7xl flex-col pt-64 text-black">
+				<h2 class="mb-8 text-h2-m uppercase lg:text-h2">Politique de cookies</h2>
+				<div class="flex flex-col gap-6">
+					<h3 class="text-h3-m lg:text-h3">
+						Agrégation des données
+					</h3>
+					<h4 class="text-m-m lg:text-l font-semibold">
+						Agrégation avec des données non personnelles
+					</h4>
+					<p class="text-m-m lg:text-l">
+						Nous pouvons publier, divulguer et utiliser les informations agrégées (informations relatives à tous nos Utilisateurs ou à des groupes ou catégories spécifiques d’Utilisateurs que nous combinons de manière à ce qu’un Utilisateur individuel ne puisse plus être identifié ou mentionné) et les informations non personnelles à des fins d’analyse du secteur et du marché, de profilage démographique, à des fins promotionnelles et publicitaires et à d’autres fins commerciales.
+					</p>
+
+					<h3 class="text-h3-m lg:text-h3 pt-6">
+						Cookies
+					</h3>
+					<h4 class="text-m-m lg:text-l font-semibold">
+						Durée de conservation des cookies
+					</h4>
+					<p class="text-m-m lg:text-l">
+						Conformément aux recommandations de la CNIL, la durée maximale de conservation des cookies est de 13 mois au maximum après leur premier dépôt dans le terminal de l’Utilisateur, tout comme la durée de la validité du consentement de l’Utilisateur à l’utilisation de ces cookies. La durée de vie des cookies n’est pas prolongée à chaque visite. Le consentement de l’Utilisateur devra donc être renouvelé à l’issue de ce délai.
+					</p>
+					<h4 class="text-m-m lg:text-l font-semibold">
+						Finalité cookies
+					</h4>
+					<p class="text-m-m lg:text-l">
+						Les cookies peuvent être utilisés pour des fins statistiques notamment pour optimiser les services rendus à l’Utilisateur, à partir du traitement des informations concernant la fréquence d’accès, la personnalisation des pages ainsi que les opérations réalisées et les informations consultées.
+					</p>
+					<p class="text-m-m lg:text-l">
+						Vous êtes informé que l’éditeur est susceptible de déposer des cookies sur votre terminal. Le cookie enregistre des informations relatives à la navigation sur le service (les pages que vous avez consultées, la date et l’heure de la consultation…) que nous pourrons lire lors de vos visites ultérieures.
+					</p>
+
+					<h3 class="text-h3-m lg:text-h3 pt-6">
+						Modification de la politique RGPD
+					</h3>
+					<p class="text-m-m lg:text-l">
+						En cas de modification de la présente politique RGPD, l’Editeur s’engage de ne pas baisser le niveau de confidentialité de manière substantielle sans l’information préalable des personnes concernées.
 					</p>
 				</div>
 			</div>
