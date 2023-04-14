@@ -22,7 +22,7 @@
 			step: 98
 		},
 		{
-			label: 'Politique de cookie',
+			label: 'Politique des cookies',
 			step: 99
 		}
 	];
@@ -327,7 +327,7 @@
 						Conformément aux recommandations de la CNIL, la durée maximale de conservation des cookies est de 13 mois au maximum après leur premier dépôt dans le terminal de l’Utilisateur, tout comme la durée de la validité du consentement de l’Utilisateur à l’utilisation de ces cookies. La durée de vie des cookies n’est pas prolongée à chaque visite. Le consentement de l’Utilisateur devra donc être renouvelé à l’issue de ce délai.
 					</p>
 					<h4 class="text-m-m lg:text-l font-semibold">
-						Finalité cookies
+						Finalité des cookies
 					</h4>
 					<p class="text-m-m lg:text-l">
 						Les cookies peuvent être utilisés pour des fins statistiques notamment pour optimiser les services rendus à l’Utilisateur, à partir du traitement des informations concernant la fréquence d’accès, la personnalisation des pages ainsi que les opérations réalisées et les informations consultées.

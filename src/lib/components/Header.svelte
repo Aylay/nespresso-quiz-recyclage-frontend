@@ -27,7 +27,7 @@
 			step: 98
 		},
 		{
-			label: 'Politique de cookie',
+			label: 'Politique des cookies',
 			step: 99
 		}
 	];
