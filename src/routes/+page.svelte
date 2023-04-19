@@ -12,6 +12,7 @@
 	import Close from '$lib/components/svg/Close.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import StepQcm from '$lib/components/steps/StepQCM.svelte';
+	import Gtm from '$lib/components/utilities/GTM.svelte';
 
 	$: step = 0;
 	let closeLegals = 0;
@@ -205,6 +206,8 @@
 	});
 </script>
 
+<Gtm gtmId="GTM-KH5BWJ3" />
+
 <div class="relative {![98, 99].includes(step) ? 'overflow-hidden' : ''} {[0, 1, 2, 20].includes(step) ? 'h-screen' : 'lg:h-screen'}">
 	<Header bind:newStep={step} />
 
@@ -305,7 +308,7 @@
 				<Close newClass="w-10 h-10" />
 			</div>
 			<div class="mx-auto flex max-w-7xl flex-col pt-64 text-black">
-				<h2 class="mb-8 text-h2-m uppercase lg:text-h2">Politique de cookies</h2>
+				<h2 class="mb-8 text-h2-m uppercase lg:text-h2">Politique des cookies</h2>
 				<div class="flex flex-col gap-6">
 					<h3 class="text-h3-m lg:text-h3">
 						Agrégation des données
