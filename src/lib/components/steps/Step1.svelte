@@ -51,7 +51,7 @@
 	</div>
 	<div class="lg:hidden">
 		<div
-			class="absolute right-[27%] top-[17%] h-[11.7rem] w-[16.6rem] overflow-hidden rounded-[7px]"
+			class="absolute right-[27%] top-[13%] h-[11.7rem] w-[16.6rem] overflow-hidden rounded-[7px]"
 		>
 			<ImageLoader
 				src="/img/img-2-m-4.png"
@@ -60,7 +60,7 @@
 				imgClass="h-full w-full object-cover"
 			/>
 		</div>
-		<div class="absolute right-[15%] top-[20%] h-[5.4rem] w-[8.3rem] overflow-hidden rounded-[7px]">
+		<div class="absolute right-[15%] top-[16%] h-[5.4rem] w-[8.3rem] overflow-hidden rounded-[7px]">
 			<ImageLoader
 				src="/img/img-2-1.png"
 				alt="Nespresso"

@@ -41,7 +41,7 @@
 </script>
 
 <div
-	class="absolute inset-x-0 top-24 z-50 flex w-full animate-fade-down items-center justify-between px-[5%] animate-delay-1000 animate-ease-in-out lg:top-20"
+	class="absolute inset-x-0 top-12 z-50 flex w-full animate-fade-down items-center justify-between px-[5%] animate-delay-1000 animate-ease-in-out lg:top-20"
 >
 	<div on:click={() => goToStep(0)}>
 		<Logo newClass="w-full max-w-[12.5rem] lg:max-w-xs cursor-pointer" />

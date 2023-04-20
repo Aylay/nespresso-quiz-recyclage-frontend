@@ -211,7 +211,7 @@
 			</div>
 		</div>
 		<div
-			class="flex flex-1 animate-fade-left flex-col gap-12 bg-crema px-8 animate-delay-500 max-lg:py-20 lg:h-full lg:items-center lg:justify-center lg:px-[5%] lg:pt-[calc(100vh*0.1)]"
+			class="flex flex-1 animate-fade-left flex-col bg-crema px-8 animate-delay-500 max-lg:py-20 lg:h-full lg:items-center lg:justify-center lg:px-[5%] lg:pt-[calc(100vh*0.1)]"
 		>
 			<img
 				src={infos.img.src}
@@ -219,7 +219,7 @@
 				class="mx-auto max-h-[60rem] w-auto animate-fade"
 			/>
 			{#if infos.ref}
-				<p class="mx-auto max-w-[45rem] text-s">
+				<p class="mx-auto max-w-[45rem] mt-12 text-s">
 					<a
 						href={infos.ref.href}
 						target="_blank"
